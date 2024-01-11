@@ -1,0 +1,36 @@
+footer {
+    margin-top: 2rem;
+    width: 100%;
+    padding: 2rem 6rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 2px solid $primary;
+    gap: 1rem;
+
+    img {
+        height: 80px;
+    }
+
+    .menu_container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        margin-bottom: 1rem;
+        list-style: none;
+        padding-inline-start: 0;
+
+        .row {
+            display: flex;
+        }
+
+        .menu_item {
+            margin: 0.5rem;
+            transition: 200ms;
+        }
+    }
+
+
+}

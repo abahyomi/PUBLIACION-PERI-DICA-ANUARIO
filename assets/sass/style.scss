@@ -1,0 +1,36 @@
+@import 'partials/vars';
+@import 'partials/fontface';
+@import 'partials/header';
+@import 'partials/main';
+@import 'partials/detalle';
+@import 'partials/footer';
+
+* {
+    font-family:"Poppins";
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body{
+    font-size: 16px;
+    margin: 0;
+    overflow-x: hidden;
+    background-color: $background;
+    cursor: none;
+ 
+    .cursor {
+        position: absolute;
+        display: block; 
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background: #f3f3f3;
+        mix-blend-mode: difference;
+        transform: translate(-50%, -50%, 0);
+        transition: 70ms;
+        z-index: 1000;
+    }
+    
+} 
+
+
