@@ -1,14 +1,17 @@
 @font-face {
   font-family: "Poppins";
-  src: url(/assets/fonts/Poppins-Regular.woff);
+  src: url("../../fonts/Poppins-Regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
 @font-face {
   font-family: "Light";
-  src: url(../../fonts/Poppins-Light.woff);
+  src: url("../../fonts/Poppins-Regular.woff"), url("../../fonts/Poppins-Regular.woff2");
 }
 @font-face {
   font-family: "Bold";
-  src: url(/assets/fonts/);
+  src: url("../../fonts/Poppins-Regular.woff"), url("../../fonts/Poppins-Regular.woff2");
 }
 h1 {
   font-size: 2rem;
@@ -91,7 +94,7 @@ h3 {
 }
 .main .hero .text h1 {
   color: #F3F3F3;
-  font-size: 140pt;
+  font-size: 140px;
 }
 .main .Works {
   padding: 4rem;
