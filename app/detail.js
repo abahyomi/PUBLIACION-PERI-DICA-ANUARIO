@@ -75,10 +75,10 @@ window.onload = () => {
                     
                    <div class="info_abajo">
                      <div class="info_extra" data-aos="fade-down" data-aos-duration="2000">
-                        <span> Especialidad: ${trabajoEncontrado.especialidad} </span>
-                        <span> Asignatura: ${trabajoEncontrado.asignatura} </span>
-                        <span> Curso: ${trabajoEncontrado.curso} </span>
-                        <span> Profesor: ${trabajoEncontrado.nombre_docente}</span>
+                        <span> <b>Especialidad:</b> ${trabajoEncontrado.especialidad} </span>
+                        <span> <b>Asignatura:</b> ${trabajoEncontrado.asignatura} </span>
+                        <span> <b>Curso:</b> ${trabajoEncontrado.curso} </span>
+                        <span> <b>Profesor:</b> ${trabajoEncontrado.nombre_docente}</span>
                      </div>
           
                      <div class="Info_Alumno" data-aos="fade-down" data-aos-duration="2500">

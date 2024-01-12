@@ -4,6 +4,9 @@
     padding: 3rem 5rem;
     align-items: flex-start;
     gap: 2rem;
+    @media (max-width: 480px) {
+        padding: 3rem 3rem;
+    }
 }
 
 h2, p {
@@ -56,20 +59,21 @@ h2, p {
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    
+
     .imagenes_adicionales {
-        display: flex;
-        gap: 1rem;
-        
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(400px, 1fr)); /* Updated grid-template-columns */
+        gap: 2rem;
     }
 
     img {
-        width: 400px;
+        max-width: 100%; /* Allow images to scale down */
         object-fit: cover;
         transition: transform 0.6s ease;
-        &:hover{
+        
+        &:hover {
             transform: scale(1.01);
-            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.10); 
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.10);
         }
     }
 }
@@ -78,9 +82,18 @@ h2, p {
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    padding-left: 3rem;
     border-left: 2px solid #070707;
     margin: 3rem 0rem;
+    padding-left: 3rem;
+
+    @media (max-width: 480px) {
+        border-left: none;
+        padding-left: 0;
+        margin: 0rem 0rem;
+        padding: 3rem 0rem;
+        border-top: 2px solid #070707;
+        border-bottom: 2px solid #070707;
+    }
 }
 
 .info_trabajo .titulo_trabajo {
@@ -99,7 +112,15 @@ h2, p {
 }
 
 .descripcion {
+
     max-width: 60%;
+    @media (max-width: 745px) {
+        max-width: 80%;
+    }
+    @media (max-width: 480px) {
+        font-size: 14px;
+        max-width: 100%;
+    }
 }
 
 .info_trabajo .info_abajo {
@@ -109,6 +130,12 @@ h2, p {
 
     .info_extra {
         display: flex;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 660px) {
+    .info_abajo{
         flex-direction: column;
     }
 }
