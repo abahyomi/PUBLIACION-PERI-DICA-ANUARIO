@@ -27,7 +27,7 @@ window.onload = () => {
         const currentWork = datos.find(work => work.titulo === currentWorkTitle);
 
         if (currentWork) {
-            window.location.href = `/pages/detalle1.html?id=${currentWork.Id}`;
+            window.location.href = `pages/detalle1.html?id=${currentWork.Id}`;
         }
         // En caso de git no ponerlo PUBLIACION-PERI-DICA-ANUARIO/pages/detalle1.html?id=${currentWork.Id}
     };
