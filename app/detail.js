@@ -1,23 +1,25 @@
 window.onload = () => {
+    // ANIMACION RATON
     const cursor = document.querySelector(".cursor");
     document.addEventListener("mousemove", (e) => {
         cursor.style.left = e.pageX + 'px';
         cursor.style.top = e.pageY + 'px';
     });
 
-            // NAV RESPONSIVE
-            let nav = document.querySelector("#nav");
-            let abrir_nav = document.querySelector("#abrir_nav");
-            let cerrar_nav = document.querySelector("#cerrar_nav");
-        
-            abrir_nav.addEventListener("click", () => {
-                nav.classList.add("visible");
-            })
-        
-            cerrar_nav.addEventListener("click", () => {
-                nav.classList.remove("visible");
-            })
+    // NAV RESPONSIVE
+    let nav = document.querySelector("#nav");
+    let abrir_nav = document.querySelector("#abrir_nav");
+    
+    abrir_nav.addEventListener("click", () => {
+        if (nav.classList.contains("visible")) {
+            nav.classList.remove("visible");
+        } else {
+            nav.classList.add("visible");
+        }
+    });
 
+
+    // COMIENZO PLANTILLA
     const urlParams = new URLSearchParams(window.location.search);
     const id = urlParams.get('id'); // Obtiene el ID de la URL
 
@@ -47,7 +49,7 @@ window.onload = () => {
                     const imagenCompleta = document.createElement('img');
                     imagenCompleta.src = primeraImagen; // URL de la imagen completa
                     imagenCompleta.alt = 'Imagen completa del trabajo';
-                    
+
                     // Abre la imagen en una nueva ventana al hacer clic
                     const ventanaImagen = window.open('', '_blank');
                     ventanaImagen.document.write('<html><head><title>Imagen completa</title></head><body style="margin: 0; display: flex; justify-content: center; align-items: center; height: 100vh;">');
@@ -55,9 +57,9 @@ window.onload = () => {
                     ventanaImagen.document.write('</body></html>');
                 });
 
-                // Construir la estructura HTML
-                lista.innerHTML = `
+                const hasVideoLink = trabajoEncontrado.enlace_video && trabajoEncontrado.enlace_video.trim() !== '';
 
+                lista.innerHTML = `
                 <div class="scroll" data-aos="fade-down" data-aos-duration="1500">
                 <span class="material-symbols-outlined">
                 arrow_downward  </span>
@@ -94,6 +96,7 @@ window.onload = () => {
                         <span data-aos="fade-down" data-aos-duration="1500"> ${trabajoEncontrado.desc_img3} </span>
                         <span data-aos="fade-down" data-aos-duration="1750"> ${trabajoEncontrado.desc_img4} </span>
                     </div>
+                    <a class="video"  target="_blank" ${hasVideoLink ? `href="${trabajoEncontrado.enlace_video}"` : 'style="display: none;"'}>Enlace a vídeo</a>
                 `;
 
                 // Agregar el contenedor de imágenes adicionales al final del elemento con la clase "resto_imagenes"

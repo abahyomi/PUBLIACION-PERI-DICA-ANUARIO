@@ -69,10 +69,17 @@
             border: 0;
             background-color: transparent;
             transition: 200ms;
+            border: 1.5px solid #f3f3f3;
+            padding: .3rem .8rem;
+            border-radius: 60px;
+            transition: 300ms;
+
 
             &:hover {
                 cursor: pointer;
                 transform: scale(105%);
+                background-color: #f3f3f3;
+                color: #070707;
             }
         }
 
@@ -91,7 +98,8 @@
             top: 100%;
             right: 0%;
             transition: max-height 600ms ease;
-            padding: 1rem 3rem;
+            padding: 1rem 4rem 1rem 1rem;
+            border-radius: 10px;
             border-left: 2px solid #f3f3f3;
             background-color: #070707;
 

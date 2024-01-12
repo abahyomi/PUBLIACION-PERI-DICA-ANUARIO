@@ -90,11 +90,17 @@ h3 {
     border: 0;
     background-color: transparent;
     transition: 200ms;
+    border: 1.5px solid #f3f3f3;
+    padding: 0.3rem 0.8rem;
+    border-radius: 60px;
+    transition: 300ms;
   }
   .header .abrir_menu:hover,
   .header .cerrar_menu:hover {
     cursor: pointer;
     transform: scale(105%);
+    background-color: #f3f3f3;
+    color: #070707;
   }
   .header .cerrar_menu {
     font-size: 1.5rem;
@@ -110,7 +116,8 @@ h3 {
     top: 100%;
     right: 0%;
     transition: max-height 600ms ease;
-    padding: 1rem 3rem;
+    padding: 1rem 4rem 1rem 1rem;
+    border-radius: 10px;
     border-left: 2px solid #f3f3f3;
     background-color: #070707;
   }
@@ -379,11 +386,16 @@ h2, p {
 }
 .resto_imagenes .imagenes_adicionales {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr)); /* Updated grid-template-columns */
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
   gap: 2rem;
 }
+@media (max-width: 530px) {
+  .resto_imagenes .imagenes_adicionales {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+}
 .resto_imagenes img {
-  max-width: 100%; /* Allow images to scale down */
+  max-width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   transition: transform 0.6s ease;
@@ -401,7 +413,7 @@ h2, p {
   margin: 3rem 0rem;
   padding-left: 3rem;
 }
-@media (max-width: 480px) {
+@media (max-width: 680px) {
   .info_trabajo {
     border-left: none;
     padding-left: 0;
@@ -448,6 +460,24 @@ h2, p {
 .info_trabajo .info_abajo .info_extra {
   display: flex;
   flex-direction: column;
+}
+
+.video {
+  border: 2px solid #070707;
+  color: #070707;
+  padding: 0.5rem 1rem;
+  border-radius: 60px;
+  transition: transform 300ms ease;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  text-decoration: none;
+}
+.video:hover {
+  background-color: #070707;
+  color: #F3F3F3;
+  transform: scale(103%);
 }
 
 @media (max-width: 660px) {

@@ -1,26 +1,24 @@
 window.onload = () => {
+    // ANIMACION RATON
     const cursor = document.querySelector(".cursor");
     document.addEventListener("mousemove", (e) => {
         cursor.style.left = e.pageX + 'px';
         cursor.style.top = e.pageY + 'px';
     });
 
-        // NAV RESPONSIVE
-        let nav = document.querySelector("#nav");
-        let abrir_nav = document.querySelector("#abrir_nav");
-        let cerrar_nav = document.querySelector("#cerrar_nav");
+    // NAV RESPONSIVE
+    let nav = document.querySelector("#nav");
+    let abrir_nav = document.querySelector("#abrir_nav");
     
-        abrir_nav.addEventListener("click", () => {
-            nav.classList.add("visible");
-        })
-    
-        cerrar_nav.addEventListener("click", () => {
+    abrir_nav.addEventListener("click", () => {
+        if (nav.classList.contains("visible")) {
             nav.classList.remove("visible");
-        })
+        } else {
+            nav.classList.add("visible");
+        }
+    });
 
-       
-      // TRABAJOS Y MINIATURAS   
-
+    // TRABAJOS Y MINIATURAS   
     let datos;
     let trabajosCargados = 9; // para cargar siempre 6 trabajos y quitar peso de la web
 
@@ -31,6 +29,7 @@ window.onload = () => {
         if (currentWork) {
             window.location.href = `/pages/detalle1.html?id=${currentWork.Id}`;
         }
+        // En caso de git no ponerlo PUBLIACION-PERI-DICA-ANUARIO/pages/detalle1.html?id=${currentWork.Id}
     };
 
     const cargarTrabajos = (cantidad) => {
@@ -83,7 +82,7 @@ window.onload = () => {
 
             const botonCargarMas = document.querySelector("#botonCargarMas");
             botonCargarMas.addEventListener("click", () => {
-                trabajosCargados += 9; // Incrementar la cantidad de trabajos a cargar en pasos de 6
+                trabajosCargados += 9; // Incrementar la cantidad de trabajos que cargan
                 cargarTrabajos(trabajosCargados);
             });
         });
