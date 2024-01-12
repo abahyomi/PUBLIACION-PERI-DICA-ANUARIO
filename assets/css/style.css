@@ -147,6 +147,11 @@ h3 {
     margin-top: 10rem;
   }
 }
+@media (max-width: 390px) {
+  .main .hero .text {
+    margin-top: 2rem;
+  }
+}
 .main .hero .text .exp {
   display: flex;
   gap: 2rem;
@@ -154,9 +159,7 @@ h3 {
 @media (max-width: 440px) {
   .main .hero .text .exp {
     flex-direction: column;
-  }
-  .main .hero .text .exp p {
-    max-width: 100%;
+    gap: 1rem;
   }
 }
 .main .hero .text .exp p {
@@ -169,16 +172,26 @@ h3 {
     max-width: 35%;
   }
 }
+@media (max-width: 440px) {
+  .main .hero .text .exp p {
+    max-width: 100%;
+  }
+}
 @media (max-width: 880px) {
   .main .hero .text .exp p {
     max-width: 75%;
+  }
+}
+@media (max-width: 390px) {
+  .main .hero .text .exp p {
+    font-size: 12px;
   }
 }
 .main .hero .text h1 {
   color: #F3F3F3;
   font-size: 140px;
 }
-@media (max-width: 1025px) {
+@media (max-width: 1045px) {
   .main .hero .text h1 {
     font-size: 100px;
   }
@@ -188,14 +201,19 @@ h3 {
     font-size: 80px;
   }
 }
-@media (max-width: 640px) {
+@media (max-width: 680px) {
   .main .hero .text h1 {
     font-size: 50px;
   }
 }
-@media (max-width: 440px) {
+@media (max-width: 500px) {
   .main .hero .text h1 {
     font-size: 40px;
+  }
+}
+@media (max-width: 400px) {
+  .main .hero .text h1 {
+    font-size: 30px;
   }
 }
 .main .Works {
