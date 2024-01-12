@@ -9,15 +9,12 @@ footer {
 
     img {
         height: 80px;
-
         @media (max-width: 440px) {
             height: 20px;
         }
-
         @media (max-width: 620px) {
             height: 30px;
         }
-
         @media (max-width: 880px) {
             height: 65px;
         }
@@ -27,7 +24,6 @@ footer {
         @media (max-width: 880px) {
             font-size: 1rem;
         }
-
         @media (max-width: 620px) {
             font-size: 0.8rem;
         }
@@ -42,21 +38,15 @@ footer {
         margin-bottom: 1rem;
         list-style: none;
         padding-inline-start: 0;
-
-
-
         .row {
             display: flex;
             @media (max-width: 620px) {
                 flex-direction: column;
             }
         }
-
         .menu_item {
             margin: 0.5rem;
             transition: 200ms;
         }
     }
-
-
 }

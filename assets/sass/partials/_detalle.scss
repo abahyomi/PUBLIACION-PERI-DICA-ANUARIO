@@ -71,7 +71,6 @@ h2, p {
         max-width: 100%; 
         object-fit: cover;
         transition: transform 0.6s ease;
-        
         &:hover {
             transform: scale(1.01);
             box-shadow: 0 8px 12px rgba(0, 0, 0, 0.10);
@@ -125,7 +124,6 @@ h2, p {
     display: flex;
     align-items: flex-start;
     gap: 2rem;
-
     .info_extra {
         display: flex;
         flex-direction: column;
@@ -150,7 +148,6 @@ h2, p {
         transform: scale(103%);
     }
 }
-
 
 @media (max-width: 660px) {
     .info_abajo{
