@@ -5,6 +5,22 @@ window.onload = () => {
         cursor.style.top = e.pageY + 'px';
     });
 
+        // NAV RESPONSIVE
+        let nav = document.querySelector("#nav");
+        let abrir_nav = document.querySelector("#abrir_nav");
+        let cerrar_nav = document.querySelector("#cerrar_nav");
+    
+        abrir_nav.addEventListener("click", () => {
+            nav.classList.add("visible");
+        })
+    
+        cerrar_nav.addEventListener("click", () => {
+            nav.classList.remove("visible");
+        })
+
+       
+      // TRABAJOS Y MINIATURAS   
+
     let datos;
     let trabajosCargados = 9; // para cargar siempre 6 trabajos y quitar peso de la web
 

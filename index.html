@@ -12,8 +12,8 @@
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <script src="app/main.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -22,12 +22,16 @@
     <header id="header" class="header">
         <a href="#"><img id="logo" src="assets/img/LogoESDblanco 1.png" alt="Logo_Abahdsn"></a>
 
-        <nav class="header_nav">
-            <ul>
+        <button class="abrir_menu" id="abrir_nav"><span class="material-symbols-outlined">
+                menu
+            </span></button>
+        <nav class="Nav" id="nav">
+            <ul id="navBar">
                 <li><a href="index.html">Home</a></li>
-                <li>About</li>
-                <li>Numbers</li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Numbers</a></li>
             </ul>
+            <button class="cerrar_menu" id="cerrar_nav">&times;</button>
         </nav>
 
     </header>
@@ -51,7 +55,7 @@
 
                     <span>© ESD Madrid</span>
                 </article>
-                <h1 class="display" data-aos="fade-down" data-aos-duration="1000">POSTER #0003</h1>
+                <h1 class="display" data-aos="fade-down" data-aos-duration="1000">POSTER #003</h1>
             </div>
         </section>
 
@@ -86,7 +90,8 @@
     </section>
     <!-- Footer-->
     <footer data-aos="fade-down" data-aos-duration="500">
-        <h2 class="copy" data-aos="fade-down" data-aos-duration="1000"> &copy; 2024, <br>Designed by: Abahyomi Cabrera </h2>
+        <h2 class="copy" data-aos="fade-down" data-aos-duration="1000"> &copy; 2024, <br>Designed by: Abahyomi Cabrera
+        </h2>
         <ul class="menu_container">
             <div class="row" data-aos="fade-down" data-aos-duration="1500">
                 <li class="menu_item">Legal</li>

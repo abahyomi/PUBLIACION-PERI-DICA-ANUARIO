@@ -41,33 +41,87 @@ h3 {
   background-color: #070707;
   color: #f3f3f3;
 }
-.header .header_nav ul {
+.header .abrir_menu,
+.header .cerrar_menu {
+  display: none;
+  color: #f3f3f3;
+}
+.header .Nav ul {
   list-style: none;
   display: flex;
   gap: 3rem;
 }
-.header .header_nav ul li {
+.header .Nav ul li {
   border: 1.5px solid #f3f3f3;
   padding: 0.5rem 1rem;
   border-radius: 60px;
   transition: 300ms;
 }
-.header .header_nav ul li a {
+.header .Nav ul li a {
   text-decoration: none;
   color: #f3f3f3;
 }
-.header .header_nav ul li a:hover {
+.header .Nav ul li a:hover {
   transform: scale(110%);
   color: #070707;
 }
-.header .header_nav ul li:hover {
+.header .Nav ul li:hover {
   transform: scale(110%);
   background-color: #f3f3f3;
   color: #070707;
 }
-@media (max-width: 880) {
-  .header {
+@media (max-width: 550px) {
+  .header img {
+    height: 45px;
+  }
+}
+@media (max-width: 880px) {
+  .header img {
+    height: 65px;
+  }
+}
+@media (max-width: 880px) {
+  .header .header {
     padding: 1rem 2rem;
+  }
+  .header .abrir_menu,
+  .header .cerrar_menu {
+    display: block;
+    border: 0;
+    background-color: transparent;
+    transition: 200ms;
+  }
+  .header .abrir_menu:hover,
+  .header .cerrar_menu:hover {
+    cursor: pointer;
+    transform: scale(105%);
+  }
+  .header .cerrar_menu {
+    font-size: 1.5rem;
+  }
+  .header .Nav {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: absolute;
+    max-height: 0px;
+    overflow: hidden;
+    opacity: 0;
+    top: 100%;
+    right: 0%;
+    transition: max-height 600ms ease;
+    padding: 1rem 3rem;
+    border-left: 2px solid #f3f3f3;
+    background-color: #070707;
+  }
+  .header .visible {
+    max-height: 400px;
+    opacity: 1;
+  }
+  .header #navBar {
+    flex-direction: column;
+    align-items: end;
+    overflow: hidden;
   }
 }
 
@@ -83,18 +137,66 @@ h3 {
 .main .hero .text {
   margin-top: 15rem;
 }
+@media (max-width: 880px) {
+  .main .hero .text {
+    margin-top: 25rem;
+  }
+}
+@media (max-width: 440px) {
+  .main .hero .text {
+    margin-top: 10rem;
+  }
+}
 .main .hero .text .exp {
   display: flex;
   gap: 2rem;
+}
+@media (max-width: 440px) {
+  .main .hero .text .exp {
+    flex-direction: column;
+  }
+  .main .hero .text .exp p {
+    max-width: 100%;
+  }
 }
 .main .hero .text .exp p {
   font-size: 14px;
   max-width: 25%;
   margin: 0;
 }
+@media (max-width: 1283px) {
+  .main .hero .text .exp p {
+    max-width: 35%;
+  }
+}
+@media (max-width: 880px) {
+  .main .hero .text .exp p {
+    max-width: 75%;
+  }
+}
 .main .hero .text h1 {
   color: #F3F3F3;
   font-size: 140px;
+}
+@media (max-width: 1025px) {
+  .main .hero .text h1 {
+    font-size: 100px;
+  }
+}
+@media (max-width: 880px) {
+  .main .hero .text h1 {
+    font-size: 80px;
+  }
+}
+@media (max-width: 640px) {
+  .main .hero .text h1 {
+    font-size: 50px;
+  }
+}
+@media (max-width: 440px) {
+  .main .hero .text h1 {
+    font-size: 40px;
+  }
 }
 .main .Works {
   padding: 4rem;
@@ -127,6 +229,18 @@ h3 {
   transform: scale(101%);
   box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
   filter: grayscale(0%);
+}
+@media (max-width: 640px) {
+  .main .Works .categoria .categoria_trabajos img {
+    height: 440px;
+    width: 395px;
+  }
+}
+@media (max-width: 480px) {
+  .main .Works .categoria .categoria_trabajos img {
+    height: 345px;
+    width: 280px;
+  }
 }
 .main .Works .categoria .categoria_trabajos .text {
   display: flex;
@@ -294,15 +408,39 @@ h2, p {
 footer {
   margin-top: 2rem;
   width: 100%;
-  padding: 2rem 6rem;
+  padding: 2rem 4rem;
   display: flex;
   justify-content: space-between;
-  align-items: center;
   border-top: 2px solid #151515;
   gap: 1rem;
 }
 footer img {
   height: 80px;
+}
+@media (max-width: 440px) {
+  footer img {
+    height: 20px;
+  }
+}
+@media (max-width: 620px) {
+  footer img {
+    height: 30px;
+  }
+}
+@media (max-width: 880px) {
+  footer img {
+    height: 65px;
+  }
+}
+@media (max-width: 880px) {
+  footer .copy {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 620px) {
+  footer .copy {
+    font-size: 0.8rem;
+  }
 }
 footer .menu_container {
   display: flex;
@@ -316,6 +454,11 @@ footer .menu_container {
 }
 footer .menu_container .row {
   display: flex;
+}
+@media (max-width: 620px) {
+  footer .menu_container .row {
+    flex-direction: column;
+  }
 }
 footer .menu_container .menu_item {
   margin: 0.5rem;

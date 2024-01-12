@@ -11,40 +11,101 @@
     background-color: #070707;
     color: #f3f3f3;
 
-    .header_nav{
-        ul{
+    .abrir_menu,
+    .cerrar_menu {
+        display: none;
+        color: #f3f3f3;
+    }
+
+    .Nav {
+        ul {
             list-style: none;
             display: flex;
             gap: 3rem;
 
-            li{
+            li {
                 border: 1.5px solid #f3f3f3;
                 padding: 0.5rem 1rem;
                 border-radius: 60px;
                 transition: 300ms;
 
-                a{
+                a {
                     text-decoration: none;
                     color: #f3f3f3;
-                    &:hover{
+
+                    &:hover {
                         transform: scale(110%);
-                        color:  #070707;
+                        color: #070707;
                     }
                 }
 
-                &:hover{
+                &:hover {
                     transform: scale(110%);
                     background-color: #f3f3f3;
-                    color:  #070707;
+                    color: #070707;
                 }
             }
         }
     }
 
+    img {
+        @media (max-width: 550px) {
+            height: 45px;
+        }
 
-    @media (max-width: 880) {
-        padding: 1rem 2rem;
+        @media (max-width: 880px) {
+            height: 65px;
+        }
+    }
+
+    @media (max-width: 880px) {
+        .header {
+            padding: 1rem 2rem;
+        }
+
+        .abrir_menu,
+        .cerrar_menu {
+            display: block;
+            border: 0;
+            background-color: transparent;
+            transition: 200ms;
+
+            &:hover {
+                cursor: pointer;
+                transform: scale(105%);
+            }
+        }
+
+        .cerrar_menu {
+            font-size: 1.5rem;
+        }
+
+        .Nav {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            position: absolute;
+            max-height: 0px;
+            overflow: hidden;
+            opacity: 0;
+            top: 100%;
+            right: 0%;
+            transition: max-height 600ms ease;
+            padding: 1rem 3rem;
+            border-left: 2px solid #f3f3f3;
+            background-color: #070707;
+
+        }
+        .visible {
+            max-height: 400px;
+            opacity: 1;
+        }
+        #navBar {
+            flex-direction: column;
+            align-items: end;
+            overflow: hidden;
+        }
+
     }
 
 }
-

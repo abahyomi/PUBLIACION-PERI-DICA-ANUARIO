@@ -5,6 +5,19 @@ window.onload = () => {
         cursor.style.top = e.pageY + 'px';
     });
 
+            // NAV RESPONSIVE
+            let nav = document.querySelector("#nav");
+            let abrir_nav = document.querySelector("#abrir_nav");
+            let cerrar_nav = document.querySelector("#cerrar_nav");
+        
+            abrir_nav.addEventListener("click", () => {
+                nav.classList.add("visible");
+            })
+        
+            cerrar_nav.addEventListener("click", () => {
+                nav.classList.remove("visible");
+            })
+
     const urlParams = new URLSearchParams(window.location.search);
     const id = urlParams.get('id'); // Obtiene el ID de la URL
 

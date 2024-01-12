@@ -1,15 +1,36 @@
 footer {
     margin-top: 2rem;
     width: 100%;
-    padding: 2rem 6rem;
+    padding: 2rem 4rem;
     display: flex;
     justify-content: space-between;
-    align-items: center;
     border-top: 2px solid $primary;
     gap: 1rem;
 
     img {
         height: 80px;
+
+        @media (max-width: 440px) {
+            height: 20px;
+        }
+
+        @media (max-width: 620px) {
+            height: 30px;
+        }
+
+        @media (max-width: 880px) {
+            height: 65px;
+        }
+    }
+
+    .copy{
+        @media (max-width: 880px) {
+            font-size: 1rem;
+        }
+
+        @media (max-width: 620px) {
+            font-size: 0.8rem;
+        }
     }
 
     .menu_container {
@@ -22,8 +43,13 @@ footer {
         list-style: none;
         padding-inline-start: 0;
 
+
+
         .row {
             display: flex;
+            @media (max-width: 620px) {
+                flex-direction: column;
+            }
         }
 
         .menu_item {
